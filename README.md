@@ -1,2 +1,5 @@
 # Millionaire
 Game "Who wants to be a millionaire" in Java
+
+Developed a multiplayer game simulation of the popular quiz "Who Wants to be a Millionaire"
+Key functionalities include implementing a game engine with basic game logic and data structure hierarchy, creating a JavaFX graphical interface adhering to best practices, and utilizing advanced programming solutions. Employed the MVC design pattern and advanced mechanisms for communication between the graphical interface and business logic. Enhanced the responsiveness of the application using multithreading and advanced libraries for data retrieval and processing. Implement serialization for persistent storage of game state and the ability to resume previous game states. Incorporate network communication for multiplayer gaming, utilizing TCP or UDP protocols, threading for socket communication, and technologies such as JNDI and RMI for player selection and in-game communication. Finally, utilize SAX/DOM libraries to enable dynamic reading and writing of game configuration in XML format.
