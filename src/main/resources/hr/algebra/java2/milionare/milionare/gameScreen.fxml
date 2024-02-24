@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="panelDisable" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.algebra.java2.milionare.milionare.GameScreenController">
+   <children>
+      <Button fx:id="getNextQuestionButton" layoutX="162.0" layoutY="337.0" mnemonicParsing="false" onAction="#getNextQuestion" prefHeight="89.0" prefWidth="216.0" text="Next Question">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="31.0" layoutY="59.0" />
+      <Label layoutX="206.0" layoutY="59.0" />
+      <Label layoutX="376.0" layoutY="59.0" />
+      <Label layoutX="562.0" layoutY="77.0" />
+      <Button fx:id="questionButton" layoutX="73.0" layoutY="467.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="421.0" text="Question:" />
+      <Button fx:id="answerOneButton" layoutX="54.0" layoutY="537.0" mnemonicParsing="false" onAction="#clickedOnAnswerA" prefHeight="50.0" prefWidth="216.0" text="AnswerOne" />
+      <Button fx:id="answerTwoButton" layoutX="296.0" layoutY="537.0" mnemonicParsing="false" onAction="#clickedOnAnswerB" prefHeight="50.0" prefWidth="216.0" text="AnswerTwo" />
+      <Button fx:id="answerThreeButton" layoutX="54.0" layoutY="610.0" mnemonicParsing="false" onAction="#clickedOnAnswerC" prefHeight="50.0" prefWidth="216.0" text="AnswerThree" />
+      <Button fx:id="answerFourButton" layoutX="296.0" layoutY="610.0" mnemonicParsing="false" onAction="#clickedOnAnswerD" prefHeight="50.0" prefWidth="216.0" text="AnswerFour" />
+      <ImageView fx:id="fiftyFiftyImageView" fitHeight="101.0" fitWidth="155.0" layoutX="376.0" layoutY="187.0" onMouseClicked="#getHalfAndHalf">
+         <image>
+            <Image url="@../../../../../images/fiftyFifty.PNG" />
+         </image>
+      </ImageView>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="1200.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#startGame" text="Start new game" />
+                    <MenuItem mnemonicParsing="false" onAction="#saveGame" text="Save game" />
+                    <MenuItem mnemonicParsing="false" onAction="#loadGame" text="Load game" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Documentation">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#generateDocumentation" text="Generate" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fx:id="prizesTableImageView" fitHeight="550.0" fitWidth="400.0" layoutX="562.0" layoutY="122.0">
+         <image>
+            <Image url="@../../../../../images/fullMoneyTree.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="audienceImageView" fitHeight="101.0" fitWidth="155.0" layoutX="24.0" layoutY="187.0" onMouseClicked="#getAskingAudience">
+         <image>
+            <Image url="@../../../../../images/audience.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="phoneImageView" fitHeight="101.0" fitWidth="155.0" layoutX="200.0" layoutY="187.0" onMouseClicked="#getCallHelp">
+         <image>
+            <Image url="@../../../../../images/call.PNG" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblWhosTurn" alignment="CENTER" layoutX="77.0" layoutY="64.0" prefHeight="43.0" prefWidth="421.0" text="Who's turn" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <VBox layoutX="989.0" layoutY="121.0" prefHeight="550.0" prefWidth="180.0">
+         <children>
+            <TextArea fx:id="chatHistoryTextArea" editable="false" prefHeight="422.0" prefWidth="180.0" wrapText="true" />
+            <TextField fx:id="chatMessageTextField" prefHeight="44.0" prefWidth="180.0" />
+            <Button mnemonicParsing="false" onAction="#sendMessage" prefHeight="41.0" prefWidth="180.0" text="Send message" />
+         </children>
+      </VBox>
+      <Label fx:id="lastGameMoveLabel" alignment="CENTER" layoutX="77.0" layoutY="114.0" prefHeight="43.0" prefWidth="421.0" text="Last Move Label" textAlignment="CENTER">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
